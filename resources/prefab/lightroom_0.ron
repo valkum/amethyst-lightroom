@@ -1,3 +1,143 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aba96fb5ca630682ab6c6b00f2421419bba2d884407c85ea8d821ccb4f553403
-size 5072
+#![enable(implicit_some)]
+/*!
+    @import /amethyst_assets/src/prefab/mod.rs#Prefab
+    @import ../../src/prefab_data.rs#ScenePrefabData
+    Prefab<ScenePrefabData>
+*/
+
+Prefab (
+    entities: [
+        (
+
+        ),
+        (
+            parent: 0,
+            data: (
+                transform: (
+                    translation: (0.0, 0.0, 0.0),
+                    scale: (55.0, 55.0, 55.0),
+                    rotation: (-0.7071068, 0, 0, 0.7071068),
+                ),
+                mesh: Shape(( shape: Plane((20,20)), )),
+                material: (
+                    albedo: Generate(Srgba(0.7, 0.7, 0.7, 1.0)),
+                    metallic_roughness: Generate(Srgba(0.1, 0.8, 0.0, 0.0))
+                ),
+            ),
+        ),
+        (
+            parent: 0,
+            data: (
+                transform: (
+                    translation: (-7.0, 0.5, 0.0),
+                    scale: (1.0, 1.0, 1.0),
+                    // rotation: (0.0, 0.0, 0.0, 1.0),
+                ),
+                // gltf: File("large/rect_light_dummy.gltf", ()),
+                // mesh: Asset(File("mesh/cuboid.obj", ("OBJ", ()))),
+                // material: (
+                //     albedo: Generate(Srgba(0.7, 0.7, 0.7, 1.0)),
+                // ),
+                light: (
+                    light: Area(Rectangle((
+                        intensity: Power(2.0),
+                        diffuse_color: (1.0, 1.0, 1.0),
+                        spec_color: (1.0, 0.0, 0.0),
+                        two_sided: true
+                    ))),
+                ),
+            ),
+        ),
+        (
+            parent: 0,
+            data: (
+                transform: (
+                    translation: (-14.0, 0.0, 0.0),
+                    scale: (1.0, 1.0, 1.0),
+                    // rotation: (0.0, 0.0, 0.0, 1.0),
+                ),
+                // gltf: File("large/rect_light_dummy.gltf", ()),
+                // mesh: Asset(File("mesh/cuboid.obj", ("OBJ", ()))),
+                // material: (
+                //     albedo: Generate(Srgba(0.7, 0.7, 0.7, 1.0)),
+                // ),
+                light: (
+                    light: Area(Rectangle((
+                        intensity: Luminance(2.0),
+                        diffuse_color: (1.0, 1.0, 1.0),
+                        spec_color: (1.0, 0.0, 0.0),
+                        two_sided: true
+                    ))),
+                ),
+            ),
+        ),
+        (
+            parent: 0,
+            data: (
+                transform: (
+                    translation: (0.0, 0.5, 0.0),
+                    scale: (1.0, 1.0, 1.0),
+                    // rotation: (0.0, 0.0, 0.0, 1.0),
+                ),
+                // gltf: File("large/rect_light_dummy.gltf", ()),
+                // mesh: Asset(File("mesh/cuboid.obj", ("OBJ", ()))),
+                // material: (
+                //     albedo: Generate(Srgba(0.7, 0.7, 0.7, 1.0)),
+                // ),
+                light: (
+                    light: Area(Disk((
+                        intensity: Luminance(2.0),
+                        diffuse_color: (1.0, 1.0, 1.0),
+                        spec_color: (1.0, 0.0, 0.0),
+                        two_sided: true
+                    ))),
+                ),
+            ),
+        ),
+        (
+            parent: 0,
+            data: (
+                transform: (
+                    translation: (7.0, 0.0, 0.0),
+                    scale: (1.0, 1.0, 1.0),
+                    // rotation: (0.0, 0.0, 0.0, 1.0),
+                ),
+                // gltf: File("large/rect_light_dummy.gltf", ()),
+                // mesh: Asset(File("mesh/cuboid.obj", ("OBJ", ()))),
+                // material: (
+                //     albedo: Generate(Srgba(0.7, 0.7, 0.7, 1.0)),
+                // ),
+                light: (
+                    light: Area(Disk((
+                        intensity: Luminance(2.0),
+                        diffuse_color: (1.0, 1.0, 1.0),
+                        spec_color: (1.0, 0.0, 0.0),
+                        two_sided: true
+                    ))),
+                ),
+            ),
+        ),
+        (
+            parent: 0,
+            data: (
+                transform: (
+                    translation: (12.0, 0.0, 0.0),
+                    scale: (1.0, 1.0, 1.0),
+                    // rotation: (0.0, 0.0, 0.0, 1.0),
+                ),
+                // gltf: File("large/rect_light_dummy.gltf", ()),
+                // mesh: Asset(File("mesh/cuboid.obj", ("OBJ", ()))),
+                // material: (
+                //     albedo: Generate(Srgba(0.7, 0.7, 0.7, 1.0)),
+                // ),
+                light: (
+                    light: Area(Sphere((
+                        intensity: Luminance(2.0),
+                        diffuse_color: (1.0, 1.0, 1.0),
+                        spec_color: (1.0, 0.0, 0.0),
+                    ))),
+                ),
+            ),
+        ),
+    ]
+)

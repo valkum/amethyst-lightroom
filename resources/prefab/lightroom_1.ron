@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:46a0f756373bed22539c8eb4f92dd09f5e6a3a79eebf835081c0ff10b5135b2b
-size 1431
+#![enable(implicit_some)]
+/*!
+    @import /amethyst_assets/src/prefab/mod.rs#Prefab
+    @import ../../src/prefab_data.rs#ScenePrefabData
+    Prefab<ScenePrefabData>
+*/
+
+Prefab (
+    entities: [
+        (),
+        (
+            data: (
+                transform: (
+                    translation: (0.0, 0.0, 0.0),
+                    // scale: (55.0, 55.0, 55.0),
+                    // rotation: (-0.7071068, 0, 0, 0.7071068),
+                ),
+                gltf: File("mesh/Sponza/Sponza.gltf", ())
+            ),
+        ),
+        (
+            parent: 0,
+            data: (
+                transform: (
+                    translation: (-8.0, 2., -0.3),
+                    scale: (2.0, 2.0, 1.0),
+                    rotation: (0.0, -0.7071, 0.0, 0.7071),
+                ),
+                // gltf: File("large/rect_light_dummy.gltf", ()),
+                // mesh: Asset(File("mesh/cuboid.obj", ("OBJ", ()))),
+                // material: (
+                //     albedo: Generate(Srgba(0.7, 0.7, 0.7, 1.0)),
+                // ),
+                light: (
+                    light: Area(Rectangle((
+                        intensity: Power(4.0),
+                        diffuse_color: (1.0, 1.0, 1.0),
+                        spec_color: (1.0, 1.0, 1.0),
+                        two_sided: false
+                    ))),
+                ),
+            ),
+        ),
+    ]
+)

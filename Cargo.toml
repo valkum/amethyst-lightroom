@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:88bfae4cc09a5baef4b7d553a55bee367902499c1bc0a132abbe0a008c835cdd
-size 641
+[package]
+name = "amethst-lightroom"
+version = "0.1.0"
+authors = ["Rudi Floren <rudi.floren@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+amethyst = {path = "../amethyst", features = ["gltf"] }
+amethyst-imgui = { path = "../amethyst-imgui"}
+derivative = "1.0"
+amethyst_derive = { path = "../amethyst/amethyst_derive", version = "0.6.1" }
+serde = { version = "1.0", features = ["derive"] }
+derive-new = "0.5.0"
+log = "0.4.0"
+renderdoc = { version = "0.7.0" }
+[features]
+default = ["vulkan"]
+vulkan = ["amethyst/vulkan", "amethyst-imgui/vulkan"]
